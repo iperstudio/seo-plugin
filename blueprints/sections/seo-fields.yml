@@ -1,0 +1,29 @@
+type: fields
+fields:
+  seoTitle:
+    label: Meta Title
+    type: text
+    maxlength: 70
+    help: Optional override for the HTML `title` tag.
+  seoDescription:
+    label: Meta Description
+    type: textarea
+    buttons: false
+    maxlength: 160
+    help: Used for the `meta description` tag.
+  ogTitle:
+    label: Open Graph Title
+    type: text
+    help: Optional override for social sharing title.
+  ogDescription:
+    label: Open Graph Description
+    type: textarea
+    buttons: false
+    maxlength: 200
+    help: Optional override for social sharing description.
+  ogImage:
+    label: Open Graph Image
+    type: files
+    max: 1
+    multiple: false
+    help: Optional override for social sharing image.

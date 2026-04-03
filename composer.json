@@ -1,13 +1,17 @@
 {
-	"name": "getkirby/pluginkit",
-	"description": "Kirby Example Plugin",
+	"name": "iperstudio/seo-plugin",
+	"description": "Iperstudio SEO Plugin",
 	"license": "MIT",
 	"type": "kirby-plugin",
 	"version": "1.0.0",
 	"authors": [
 		{
-			"name": "Your Name",
-			"email": "you@example.com"
+			"name": "Marco Mezzavilla",
+			"email": "hub@marcomezzavilla.com"
+		},
+		{
+			"name": "Giorgio Da Re",
+			"email": "hello@giorgiodare.it"
 		}
 	],
 	"require": {

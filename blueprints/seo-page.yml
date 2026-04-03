@@ -1,0 +1,8 @@
+label: SEO
+icon: search
+columns:
+  main:
+    width: 2/3
+    sections:
+      seo:
+        extends: sections/seo-fields

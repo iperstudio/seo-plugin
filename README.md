@@ -1,57 +1,68 @@
-# Kirby Pluginkit: Example plugin for Kirby
+# Iperstudio SEO Plugin
 
-> Variant "Basic setup"
+Provides:
 
-This is a boilerplate for a Kirby plugin that can be installed via all three [supported installation methods](https://getkirby.com/docs/guide/plugins/plugin-setup-basic#the-three-plugin-installation-methods).
-
-You can find a list of Pluginkit variants on the [`master` branch](https://github.com/getkirby/pluginkit/tree/master).
-
-****
-
-## How to use the Pluginkit
-
-1. Fork this repository
-2. Change the plugin name and description in the `composer.json`
-3. Change the plugin name in the `index.php`
-4. Change the license if you don't want to publish under MIT
-5. Add your plugin code to the `index.php`
-6. Update this `README` with instructions for your plugin
-
-We have a tutorial on how to build your own plugin based on the Pluginkit [in the Kirby documentation](https://getkirby.com/docs/guide/plugins/plugin-setup-basic).
-
-What follows is an example README for your plugin.
+- `seo/page` tab blueprint
+- `sections/seo-fields` reusable blueprint section
+- `seo/meta` snippet for frontend meta tags
+- base `title` tag + meta description + Open Graph/Twitter tags
 
 ****
 
 ## Installation
 
-### Download
-
-Download and copy this repository to `/site/plugins/{{ plugin-name }}`.
-
-### Git submodule
-
-```
-git submodule add https://github.com/{{ your-name }}/{{ plugin-name }}.git site/plugins/{{ plugin-name }}
-```
-
 ### Composer
 
 ```
-composer require {{ your-name }}/{{ plugin-name }}
+composer require iperstudio/seo-plugin
 ```
 
 ## Setup
 
-*Additional instructions on how to configure the plugin (e.g. blueprint setup, config options, etc.)*
+In page blueprint:
+
+```yaml
+tabs:
+  content: ...
+  seo: seo/page
+```
+
+Or inside an existing tab section:
+
+```yaml
+sections:
+  seo:
+    extends: sections/seo-fields
+```
+
+In `<head>`:
+
+```php
+<?php snippet('seo/meta') ?>
+```
 
 ## Options
 
-*Document the options and APIs that this plugin offers*
+Add optional prefix/suffix for `title` and `og:title`:
 
-## Development
-
-*Add instructions on how to help working on the plugin (e.g. npm setup, Composer dev dependencies, etc.)*
+```php
+return [
+  'iperstudio.seo.title.suffix' => 'Oltreoceano',
+  'iperstudio.seo.title.separator' => ' | ',
+  // 0 = no truncation
+  // 'iperstudio.seo.title.maxLength' => 0,
+  // 'iperstudio.seo.ogTitle.maxLength' => 0,
+  // 'iperstudio.seo.description.maxLength' => 160,
+  // 'iperstudio.seo.ogDescription.maxLength' => 200,
+  // Description fallback fields (first non-empty wins)
+  // Note: `seoDescription` (if filled) always wins over these defaults.
+  // 'iperstudio.seo.defaultDescriptionContent' => ['seoDescription'],
+  // Optional separate OG overrides (fallback to title options if omitted)
+  // 'iperstudio.seo.ogTitle.prefix' => '',
+  // 'iperstudio.seo.ogTitle.suffix' => 'Oltreoceano',
+  // 'iperstudio.seo.ogTitle.separator' => ' | ',
+];
+```
 
 ## License
 
@@ -59,4 +70,4 @@ MIT
 
 ## Credits
 
-- [Your Name](https://github.com/ghost)
+- [Iperstudio](https://github.com/iperstudio)
