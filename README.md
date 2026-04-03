@@ -79,7 +79,7 @@ return [
 
 ## Updates
 
-1. Update the code and the version `composer.json`:
+1. Update the code and the version number in `composer.json`:
 ```
 "version": "1.0.X"
 ```
