@@ -6,12 +6,8 @@
     "version": "1.0.3",
 	"authors": [
 		{
-			"name": "Marco Mezzavilla",
-			"email": "hub@marcomezzavilla.com"
-		},
-		{
-			"name": "Giorgio Da Re",
-			"email": "hello@giorgiodare.it"
+			"name": "Iperstudio",
+			"email": "ciao@iperstudio.net"
 		}
 	],
 	"require": {
