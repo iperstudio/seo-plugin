@@ -2,6 +2,8 @@
 
 use Kirby\Cms\App as Kirby;
 
+require_once __DIR__ . '/Seo.php';
+
 Kirby::plugin('iperstudio/seo-plugin', [
     'blueprints' => [
         'seo/page' => __DIR__ . '/blueprints/seo-page.yml',

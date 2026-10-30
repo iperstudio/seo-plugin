@@ -27,3 +27,9 @@ fields:
     max: 1
     multiple: false
     help: Optional override for social sharing image.
+  seoNoindex:
+    label: Exclude from search engines
+    type: toggle
+    default: false
+    translate: false
+    help: Adds noindex and excludes the page from the Iperstudio sitemap plugin.

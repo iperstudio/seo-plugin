@@ -1,22 +1,48 @@
 {
-    "name": "iperstudio/seo-plugin",
-    "description": "Iperstudio SEO Plugin",
-    "license": "MIT",
-    "type": "kirby-plugin",
-    "version": "1.0.3",
-    "homepage": "https://github.com/iperstudio/seo-plugin",
-    "authors": [
-        {
-            "name": "Iperstudio",
-            "email": "ciao@iperstudio.net",
-            "homepage": "https://iperstudio.net/"
-        }
-    ],
-    "require": {
-        "php": ">=8.2",
-        "getkirby/composer-installer": "^1.1"
-    },
-    "conflict": {
-        "getkirby/cms": "<5.0.0 || >=6.0.0"
+  "name": "iperstudio/seo-plugin",
+  "description": "Iperstudio SEO Plugin",
+  "license": "MIT",
+  "type": "kirby-plugin",
+  "version": "1.1.0",
+  "homepage": "https://github.com/iperstudio/seo-plugin",
+  "authors": [
+    {
+      "name": "Iperstudio",
+      "email": "ciao@iperstudio.net",
+      "homepage": "https://iperstudio.net/"
     }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "getkirby/composer-installer": "^1.1",
+    "ext-mbstring": "*"
+  },
+  "conflict": {
+    "getkirby/cms": "<5.0.0 || >=7.0.0-dev"
+  },
+  "keywords": [
+    "kirby",
+    "kirby-plugin",
+    "seo"
+  ],
+  "support": {
+    "issues": "https://github.com/iperstudio/seo-plugin/issues",
+    "source": "https://github.com/iperstudio/seo-plugin"
+  },
+  "require-dev": {
+    "getkirby/cms": "^5.0 || ^6.0@beta"
+  },
+  "scripts": {
+    "test": "@php tests/run.php"
+  },
+  "config": {
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "extra": {
+    "kirby": {
+      "compatible": "^5.0 || ^6.0"
+    }
+  }
 }
